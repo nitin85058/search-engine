@@ -23,7 +23,7 @@ st.title("🔎 LangChain - Chat with search")
 
 ## Sidebar for settings
 # st.sidebar.title("Settings")
-api_key=os.getenv('GROQ_API_KEY')
+api_key = st.secrets["GROQ_API_KEY"]
 
 if "messages" not in st.session_state:
     st.session_state["messages"]=[
