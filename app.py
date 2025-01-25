@@ -33,7 +33,7 @@ if "messages" not in st.session_state:
 for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg['content'])
 
-if prompt:=st.chat_input(placeholder="What is machine learning?"):
+if prompt:=st.chat_input(placeholder="How can i help you"):
     st.session_state.messages.append({"role":"user","content":prompt})
     st.chat_message("user").write(prompt)
 
