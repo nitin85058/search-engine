@@ -9,10 +9,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 ## Arxiv and wikipedia Tools
-arxiv_wrapper=ArxivAPIWrapper(top_k_results=1, doc_content_chars_max=1000)
+arxiv_wrapper=ArxivAPIWrapper(top_k_results=1, doc_content_chars_max=200)
 arxiv=ArxivQueryRun(api_wrapper=arxiv_wrapper)
 
-api_wrapper=WikipediaAPIWrapper(top_k_results=1,doc_content_chars_max=1000)
+api_wrapper=WikipediaAPIWrapper(top_k_results=1,doc_content_chars_max=500)
 wiki=WikipediaQueryRun(api_wrapper=api_wrapper)
 
 search=DuckDuckGoSearchRun(name="Search")
